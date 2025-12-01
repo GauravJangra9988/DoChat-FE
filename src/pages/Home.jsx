@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Forward, Paperclip, Sun } from "lucide-react";
+import { Forward, Paperclip, Sun, Trash } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import toast from "react-hot-toast";
 
@@ -145,7 +145,10 @@ export const Home = () => {
       }`}
     >
       <div className="absolute top-10 right-15" onClick={handleThemeChange}>
-        <Sun className="text-primary" />
+        <div>
+          <Sun className="text-primary" />
+        </div>
+        
       </div>
       <div
         className={`text-primary cursor-pointer absolute top-20 right-15 font-serif font-bold ${
@@ -153,7 +156,7 @@ export const Home = () => {
         }`}
         onClick={() => handleDelete()}
       >
-        Remove History
+        <Trash className="text-primary" />
       </div>
       <div className={showInput ? "hidden" : "block"}>
         <h1 className="font-semibold text-primary font-serif text-8xl text-center">
@@ -197,7 +200,7 @@ export const Home = () => {
             exit="exit"
             variants={variants}
             transition={{ duration: 0.4 }}
-            className="relative border rounded-3xl mx-auto min-w-2xl min-h-48 border-primary mt-8 w-full max-w-2xl"
+            className="relative border rounded-3xl mx-auto min-h-48 border-primary mt-8 w-full max-w-2xl"
           >
             <textarea
               id="chatArea"
