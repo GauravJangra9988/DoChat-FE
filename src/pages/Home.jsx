@@ -138,7 +138,7 @@ export const Home = () => {
 
   return (
     <div
-      className={`h-screen overflow-hidden bg-bg font-serif flex flex-col items-center px-4 ${
+      className={`min-h-screen overflow-hidden bg-bg font-serif flex flex-col items-center px-4 ${
         showInput ? "relative justify-between py-20" : "justify-center"
       }`}
     >
