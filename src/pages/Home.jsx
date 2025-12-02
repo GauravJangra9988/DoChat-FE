@@ -138,26 +138,27 @@ export const Home = () => {
 
   return (
     <div
-      className={`${
-        showInput ? "h-screen overflow-hidden" : "min-h-screen"
-      } bg-bg font-serif flex flex-col items-center px-4 ${
+      className={`h-screen overflow-hidden bg-bg font-serif flex flex-col items-center px-4 ${
         showInput ? "relative justify-between py-20" : "justify-center"
       }`}
     >
-      <div className="absolute top-10 right-15" onClick={handleThemeChange}>
-        <div>
-          <Sun className="text-primary" />
-        </div>
-        
-      </div>
       <div
-        className={`text-primary cursor-pointer absolute top-20 right-15 font-serif font-bold ${
-          showInput ? "block" : "hidden"
-        }`}
-        onClick={() => handleDelete()}
+        className="absolute top-10 flex flex-row right-15"
+        onClick={handleThemeChange}
       >
-        <Trash className="text-primary" />
+        <div className="flex flex-row gap-5">
+          <div
+            className={`text-primary cursor-pointer font-serif font-bold ${
+              showInput ? "block" : "hidden"
+            }`}
+            onClick={() => handleDelete()}
+          >
+            <Trash className="text-primary" />
+          </div>
+          <Sun className="text-primary cursor-pointer" />
+        </div>
       </div>
+
       <div className={showInput ? "hidden" : "block"}>
         <h1 className="font-semibold text-primary font-serif text-8xl text-center">
           Chat with .doc
