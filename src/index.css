@@ -83,3 +83,8 @@
   --color-bg: var(--color-bg);
 }
 
+@layer base {
+  html, body {
+    @apply bg-bg overscroll-none; 
+  }
+}

@@ -138,14 +138,11 @@ export const Home = () => {
 
   return (
     <div
-      className={`min-h-screen overflow-hidden bg-bg font-serif flex flex-col items-center px-4 ${
+      className={`min-h-dvh overflow-hidden bg-bg font-serif flex flex-col items-center px-4 ${
         showInput ? "relative justify-between py-20" : "justify-center"
       }`}
     >
-      <div
-        className="absolute top-10 flex flex-row right-15"
-        onClick={handleThemeChange}
-      >
+      <div className="absolute top-10 flex flex-row right-15">
         <div className="flex flex-row gap-5">
           <div
             className={`text-primary cursor-pointer font-serif font-bold ${
@@ -155,7 +152,9 @@ export const Home = () => {
           >
             <Trash className="text-primary" />
           </div>
-          <Sun className="text-primary cursor-pointer" />
+          <div onClick={handleThemeChange}>
+            <Sun className="text-primary cursor-pointer" />
+          </div>
         </div>
       </div>
 
